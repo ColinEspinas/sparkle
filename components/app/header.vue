@@ -11,12 +11,15 @@ const localePath = useLocalePath()
     </div>
     <div class="flex gap-2 items-center">
       <template v-if="$auth.loggedIn">
-        <p v-if="$auth.user.given_name && $auth.user.family_name" class="font-medium">
-          {{ `${$auth.user.given_name} ${$auth.user.family_name[0]}.` }}
-        </p>
-        <p v-else class="font-medium">
-          {{ $auth.user.email }}
-        </p>
+        <div class="flex gap-2 items-center">
+          <p v-if="$auth.user.given_name && $auth.user.family_name" class="font-medium">
+            {{ `${$auth.user.given_name} ${$auth.user.family_name[0]}.` }}
+          </p>
+          <p v-else class="font-medium">
+            {{ $auth.user.email }}
+          </p>
+          <UiAvatar :picture="$auth.user.picture ?? ''" :placeholder="`${$auth.user.given_name[0]}${$auth.user.family_name[0]}`" />
+        </div>
         <UiButton
           to="/api/logout"
           external

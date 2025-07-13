@@ -30,8 +30,8 @@ const appleLoginLink = withQuery('/api/register', { connection_id: kindeAppleCon
 </script>
 
 <template>
-<div class="flex flex-col gap-6 p-2 sm:p-5 mx-2 mb-10 max-w-[500px] w-[calc(100%_-_var(--spacing)*4)] rounded-2xl bg-linear-0 from-base to-transparent from-80%">
-  <article class="flex flex-col gap-2 p-5 items-center w-full">
+<div class="flex flex-col gap-6  mb-10 max-w-[500px] w-[calc(100%_-_var(--spacing)*4)]">
+  <article class="flex flex-col gap-2 p-7 sm:p-10 mx-2 items-center w-full rounded-2xl bg-linear-0 from-base to-transparent from-80%">
     <NuxtLink :to="localePath('/')" class="mb-10">
       <AppLogo />
     </NuxtLink>
@@ -41,7 +41,7 @@ const appleLoginLink = withQuery('/api/register', { connection_id: kindeAppleCon
 
     <form class="flex flex-col gap-2 mt-2 w-full">
       <div>
-        <label for="email" class="font-medium mb-1 after:content-['*'] after:text-accent">Email</label>
+        <label for="email" class="font-medium after:content-['*'] after:text-accent">Email</label>
         <input
           v-model="email"
           type="email"
@@ -52,7 +52,7 @@ const appleLoginLink = withQuery('/api/register', { connection_id: kindeAppleCon
           hover:ring-3 hover:ring-base-content/10 hover:border-base-content/30
           focus-within:border-accent! focus-within:ring-3! focus-within:ring-accent/20!
           border-1 border-base-content/10 bg-base
-          rounded-lg p-2 outline-none w-full flex flex-col items-end gap-2
+          rounded-lg p-2 outline-none w-full flex flex-col items-end gap-2 mt-1
           "
         >
       </div>
