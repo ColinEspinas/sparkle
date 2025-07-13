@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  	--color-accent: rgba(255, 98, 0);
+    --color-accent-content: rgba(255, 251, 249);
+    --color-base: rgba(255, 251, 249);
+    --color-base-content: rgba(17, 7, 0);
+    --font-sans: 'Work Sans', sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-base);
+    color: var(--color-base-content);
+    font-family: var(--font-sans);
+  }
+}

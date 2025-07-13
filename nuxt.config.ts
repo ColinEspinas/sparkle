@@ -1,9 +1,17 @@
 import i18nConfig from './i18n/i18n.config'
+import tailwindcss from "@tailwindcss/vite";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
+
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+  },
+  css: ['~/assets/css/main.css'],
 
   modules: [
     '@nuxt/eslint',
@@ -13,6 +21,7 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxtjs/kinde',
     '@nuxtjs/i18n',
+    '@vueuse/nuxt'
   ],
 
   runtimeConfig: {
@@ -24,9 +33,17 @@ export default defineNuxtConfig({
     public: {
       // Keys within public, will be also exposed to the client-side
       appDomain: '',
-      kindeGithubConnectionId: '',
+      kindeLinkedinConnectionId: '',
+      kindeGoogleConnectionId: '',
+      kindeAppleConnectionId: '',
       kindeEmailConnectionId: '',
     },
+  },
+
+  fonts: {
+    defaults: {
+      weights: [300, 400, 500, 600, 700, 800, 900],
+    }
   },
 
   i18n: i18nConfig,
