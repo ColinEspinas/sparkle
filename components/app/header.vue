@@ -1,5 +1,14 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
+const { user } = useAuth()
+
+const avatarPlaceholder = computed(() => {
+  if (!user)
+    return ''
+  return user.given_name && user.family_name
+    ? `${user.given_name[0]}${user.family_name[0]}`
+    : user.email[0]
+})
 </script>
 
 <template>
@@ -18,7 +27,10 @@ const localePath = useLocalePath()
           <p v-else class="font-medium">
             {{ $auth.user.email }}
           </p>
-          <UiAvatar :picture="$auth.user.picture ?? ''" :placeholder="`${$auth.user.given_name[0]}${$auth.user.family_name[0]}`" />
+          <UiAvatar
+            :picture="$auth.user.picture ?? ''"
+            :placeholder="avatarPlaceholder"
+          />
         </div>
         <UiButton
           to="/api/logout"

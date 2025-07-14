@@ -37,7 +37,7 @@ const alignClasses = {
 }
 
 const buttonRef = useTemplateRef<HTMLDivElement>('button')
-const { elementX, elementY, isOutside, elementHeight, elementWidth } = useMouseInElement(buttonRef)
+const { elementX, elementY } = useMouseInElement(buttonRef)
 
 const gradientPosition = computed(() => {
   // if (isOutside.value) return 'circle at 50% 100%'
@@ -51,8 +51,8 @@ const gradientPosition = computed(() => {
 
 <template>
   <NuxtLink
-    ref="button"
     v-if="to"
+    ref="button"
     :to="to"
     class="py-2 px-3 flex gap-2 rounded-lg items-center outline-none font-medium active:scale-95"
     :class="[variantClasses[variant], alignClasses[align]]"

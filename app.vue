@@ -6,8 +6,8 @@
 
 <template>
   <!-- <ConfigProvider :use-id="useIdFunction"> -->
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
   <!-- </ConfigProvider> -->
 </template>

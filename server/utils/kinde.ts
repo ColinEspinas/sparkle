@@ -1,5 +1,5 @@
-import type { H3Event } from 'h3'
 import type { ACClient, SessionManager } from '@kinde-oss/kinde-typescript-sdk'
+import type { H3Event } from 'h3'
 import {
   APIsApi,
   ApplicationsApi,
@@ -46,7 +46,7 @@ export async function useKindeManagementApi() {
     apiToken = await getApiToken()
   }
   catch (error) {
-    throw createError({ statusMessage: 'Failed to fetch Kinde API token', statusCode: 500 })
+    throw createError({ statusMessage: 'Failed to fetch Kinde API token', statusCode: 500, cause: error })
   }
 
   const configuration = new Configuration({

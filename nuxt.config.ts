@@ -1,10 +1,16 @@
+import tailwindcss from '@tailwindcss/vite'
 import i18nConfig from './i18n/i18n.config'
-import tailwindcss from "@tailwindcss/vite";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
+
+  eslint: {
+    config: {
+      standalone: false,
+    },
+  },
 
   vite: {
     plugins: [
@@ -21,7 +27,7 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxtjs/kinde',
     '@nuxtjs/i18n',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
   ],
 
   runtimeConfig: {
@@ -43,7 +49,7 @@ export default defineNuxtConfig({
   fonts: {
     defaults: {
       weights: [300, 400, 500, 600, 700, 800, 900],
-    }
+    },
   },
 
   i18n: i18nConfig,

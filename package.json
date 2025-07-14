@@ -45,6 +45,7 @@
     "@tolgee/cli": "^2.13.0",
     "drizzle-kit": "^0.31.4",
     "eslint": "^9.0.0",
+    "eslint-plugin-format": "^1.0.1",
     "tsx": "^4.20.3"
   }
 }
