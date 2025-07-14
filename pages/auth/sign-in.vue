@@ -20,7 +20,6 @@ useSeoMeta({
   description: t('home.meta.description'),
 })
 
-
 const localePath = useLocalePath()
 const email = ref('')
 
@@ -53,7 +52,7 @@ const appleLoginLink = withQuery('/api/login', { connection_id: kindeAppleConnec
           hover:ring-3 hover:ring-base-content/10 hover:border-base-content/30
           focus-within:border-accent! focus-within:ring-3! focus-within:ring-accent/20!
           border-1 border-base-content/10 bg-base
-          rounded-lg p-2 outline-none w-full flex flex-col items-end gap-2
+          rounded-lg p-2 outline-none w-full flex flex-col items-end gap-2 mt-1
           "
         >
       </div>
