@@ -7,6 +7,6 @@ export default defineConfig({
   out: './.drizzle',
   dialect: 'postgresql',
   dbCredentials: {
-    url: process.env.NUXT_DB_URL || '',
+    url: process.env.NUXT_DATABASE_URL || '',
   },
 })

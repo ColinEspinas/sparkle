@@ -28,6 +28,7 @@ export default defineNuxtConfig({
     '@nuxtjs/kinde',
     '@nuxtjs/i18n',
     '@vueuse/nuxt',
+    '@vueuse/motion/nuxt',
   ],
 
   runtimeConfig: {
